@@ -1,0 +1,10 @@
+# Erzeugt, gehoert nicht ins Repository
+dist/
+
+# Zugang zum Webspace, sobald hochladen.py dazukommt
+zugang.json
+
+__pycache__/
+*.pyc
+Thumbs.db
+desktop.ini

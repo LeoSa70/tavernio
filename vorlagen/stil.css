@@ -1,0 +1,154 @@
+/* Speisekammer — ein Stylesheet, mehr braucht es nicht.
+   Zuerst fürs Handy gebaut: Der Einkaufszettel wird im Laden gelesen,
+   einhändig, mit dem Korb am Arm. Daraus folgt alles Weitere —
+   große Zeilen, kräftiger Kontrast, nichts zum Zielen. */
+
+:root {
+  --papier: #fbfaf7;
+  --tinte: #24221e;
+  --leise: #6b675e;
+  --linie: #e2ded4;
+  --oliv: #5d7a3a;
+  --oliv-hell: #eef3e6;
+  --bernstein: #b8791f;
+  --tomate: #b3402c;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --papier: #1a1917;
+    --tinte: #ece8e0;
+    --leise: #9a958a;
+    --linie: #35322c;
+    --oliv: #a3c073;
+    --oliv-hell: #262c1d;
+    --bernstein: #e0a446;
+    --tomate: #e2705a;
+  }
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--papier);
+  color: var(--tinte);
+  font: 1.05rem/1.6 -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.5rem 1.2rem;
+  padding: 1rem 16px;
+  border-bottom: 2px solid var(--linie);
+}
+
+.marke {
+  font-weight: 700;
+  font-size: 1.15rem;
+  color: var(--oliv);
+  text-decoration: none;
+}
+
+nav { display: flex; flex-wrap: wrap; gap: 0.3rem; }
+
+nav a {
+  display: inline-block;
+  min-height: 2.75rem;
+  padding: 0.55rem 0.85rem;
+  border-radius: 0.5rem;
+  color: var(--tinte);
+  text-decoration: none;
+}
+
+nav a:hover { background: var(--oliv-hell); }
+nav a.hier { background: var(--oliv); color: var(--papier); font-weight: 600; }
+
+main { max-width: 42rem; margin: 0 auto; padding: 1.2rem 16px 3rem; }
+
+h1 { font-size: 1.55rem; line-height: 1.25; margin: 0 0 0.8rem; }
+h2 {
+  font-size: 1.1rem;
+  margin: 2rem 0 0.5rem;
+  padding-bottom: 0.3rem;
+  border-bottom: 1px solid var(--linie);
+  color: var(--leise);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+a { color: var(--oliv); }
+code {
+  background: var(--oliv-hell);
+  padding: 0.1em 0.35em;
+  border-radius: 0.25rem;
+  font-size: 0.9em;
+}
+
+.hinweis, .neben { color: var(--leise); font-size: 0.92rem; }
+.kurz { font-size: 1.05rem; }
+.leer {
+  padding: 1.2rem;
+  background: var(--oliv-hell);
+  border-radius: 0.5rem;
+  color: var(--leise);
+}
+
+/* Listen: Vorrat, Zettel, Zutaten — alle derselbe Bau */
+.zettel, .vorratsliste, .zutaten, .rezeptliste {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.zettel li, .vorratsliste li, .zutaten li, .rezeptliste li {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.15rem 0.6rem;
+  min-height: 3rem;
+  padding: 0.6rem 0.2rem;
+  border-bottom: 1px solid var(--linie);
+}
+
+.rezeptliste li { display: block; }
+.rezeptliste a { font-weight: 600; font-size: 1.08rem; }
+
+.was { font-weight: 600; }
+.menge { color: var(--leise); }
+.warum { color: var(--leise); font-size: 0.9rem; flex-basis: 100%; }
+
+/* Der Punkt sagt die Stufe. Farbe allein würde es nicht tun —
+   deshalb steht daneben immer auch ein Wort. */
+.punkt {
+  flex: 0 0 auto;
+  width: 0.85rem;
+  height: 0.85rem;
+  border-radius: 50%;
+  background: var(--oliv);
+}
+.punkt.knapp { background: var(--bernstein); }
+.punkt.alle { background: var(--tomate); }
+
+.gut { color: var(--oliv); font-weight: 600; }
+.mittel { color: var(--bernstein); }
+.schlecht { color: var(--tomate); font-weight: 600; }
+
+ol, ul.schritte { padding-left: 1.3rem; }
+ol li { margin-bottom: 0.7rem; }
+
+footer {
+  max-width: 42rem;
+  margin: 0 auto;
+  padding: 1.5rem 16px 2.5rem;
+  border-top: 1px solid var(--linie);
+  color: var(--leise);
+  font-size: 0.85rem;
+}
+
+@media (min-width: 40rem) {
+  body { font-size: 1.1rem; }
+  h1 { font-size: 1.9rem; }
+}

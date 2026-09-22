@@ -1,4 +1,4 @@
-# Speisekammer
+# Tavernio
 
 Vorrat, Einkauf und Rezepte für zwei Personen — mediterran gekocht.
 

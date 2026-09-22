@@ -1,4 +1,4 @@
-"""Prüfungen für die Speisekammer.
+"""Prüfungen für Tavernio.
 
 Aufruf aus dem Projektordner:
     python -m unittest discover -s tests -t .

@@ -8,3 +8,7 @@ __pycache__/
 *.pyc
 Thumbs.db
 desktop.ini
+
+# Obsidian: lokaler UI-Zustand, nicht die Notizen selbst
+.obsidian/workspace*
+.obsidian/cache

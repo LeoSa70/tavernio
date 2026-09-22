@@ -354,11 +354,11 @@ def rahmen(titel, inhalt, hoch='', aktiv=''):
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
-<title>{html.escape(titel)} – Speisekammer</title>
+<title>{html.escape(titel)} – Tavernio</title>
 <link rel="stylesheet" href="{hoch}stil.css">
 </head>
 <body>
-<header><a class="marke" href="{hoch}index.html">Speisekammer</a>
+<header><a class="marke" href="{hoch}index.html">Tavernio</a>
 <nav>{navigation}</nav></header>
 <main>
 {inhalt}

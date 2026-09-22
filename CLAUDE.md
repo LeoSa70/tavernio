@@ -1,4 +1,4 @@
-# Speisekammer — Projektkontext für Claude Code
+# Tavernio — Projektkontext für Claude Code
 
 ## Was das ist
 
@@ -96,7 +96,7 @@ Das hier ist dieser zweite.
 
 - **Mealcraft** = Wissen. Was der Körper braucht, mit Quelle, `Stand:`
   und Sicherheitsgrad.
-- **Speisekammer** = Küche. Was da ist und wie es gekocht wird.
+- **Tavernio** = Küche. Was da ist und wie es gekocht wird.
 
 Kein Ernährungswissen in Rezepte schreiben. Wer wissen will, warum
 Hülsenfrüchte gut sind, liest es dort — mit Quelle, nicht als
